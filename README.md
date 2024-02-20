@@ -4,8 +4,8 @@
 
 <h3>Estatísticas do GitHub</h3>
 
-![HugoFrajacomo's GitHub stats](https://github-readme-stats.vercel.app/api?username=HugoFrajacomo&show_icons=true&theme=dracula)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HugoFrajacomo&layout=compact)
+![HugoFrajacomo's GitHub stats](https://github-readme-stats.vercel.app/api?username=HugoFrajacomo&show_icons=true&theme=dracula&locale=pt-br)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HugoFrajacomo&layout=compact&locale=pt-br&theme=dracula)
 
 <hr>
 <h3>Redes Sociais</h3>
