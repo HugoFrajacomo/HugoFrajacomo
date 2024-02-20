@@ -41,7 +41,7 @@
 
 <hr>
 
-### Total de visitas no Perfil
+<h3>Total de visitas no Perfil</h3>
 <img alt="Contador de Views" src="https://profile-counter.glitch.me/HugoFrajacomo/count.svg" />
 
 <hr>
