@@ -1,6 +1,6 @@
 <h1>Hugo Frajacomo</h1>
 
-<p><b>Aluno (4º Termo)</b> | Fatec Matão - Luiz Marchesan | Desenvolvimento de Software Multiplataforma</p>
+<p><b>Aluno (5º Termo)</b> | Fatec Matão - Luiz Marchesan | Desenvolvimento de Software Multiplataforma</p>
 
 <h3>Estatísticas do GitHub</h3>
 
