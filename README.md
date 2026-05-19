@@ -1,6 +1,6 @@
 <div align="center">
   <h1><a href="https://git.io/typing-svg"><img src="https://capsule-render.vercel.app/api?type=blur&height=200&color=gradient&text=Hugo%20Frajacomo&textBg=false" alt="Typing SVG" /></a></h1>
-  <h3><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Data+Engineer+%7C+Databricks+Associate" alt="Typing SVG" /></a></h3>
+  <h3><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=475&lines=Data+Engineer+%7C++Databricks+Professional" alt="Typing SVG" /></a></h3>
   
   <p>
     Engenheiro de Dados especializado no ecossistema Databricks, utilizando a arquitetura Lakehouse como base principal para centralizar e otimizar o processamento de grandes volumes de informações. Minha competência central reside na manipulação avançada de dados e na construção de pipelines de ETL e ELT diretamente dentro da plataforma Databricks. Utilizo Python, PySpark e SQL para transformar dados brutos em ativos de valor, garantindo performance, escalabilidade e a aplicação de boas práticas de governança desde a ingestão até a camada final de análise.
