@@ -1,12 +1,8 @@
+  <!-- Header Banner -->
 <div align="center">
   <h1><a href="https://git.io/typing-svg"><img src="https://capsule-render.vercel.app/api?type=blur&height=200&color=gradient&text=Hugo%20Frajacomo&textBg=false" alt="Typing SVG" /></a></h1>
 
-  
- <div align="center">
-  
-  <!-- Header Banner -->
-
-
+<div align="center">
   <!-- Animated Typing Title -->
   <h3>
     <a href="https://git.io/typing-svg">
@@ -17,7 +13,6 @@
   <br>
 
   <!-- ==================== ANIMATED DATA PIPELINE GRAPHIC ==================== -->
-  <!-- This is the custom-built, native-animated SVG showcasing continuous ETL flow in Delta Lakehouse -->
   <img src="./pipeline.svg" width="100%" alt="Lakehouse Data Pipeline" />
 
   <br><br>
@@ -29,41 +24,6 @@
 
   <br>
 
-  <!-- ==================== SPARKSESSION INTERACTIVE TERMINAL ==================== -->
-  <div align="left">
-    <p>⚙️ <strong>Spark Session Console:</strong></p>
-  </div>
-</div>
-
-```python
-# Initializing PySpark Session for Hugo Frajacomo Profile
-from pyspark.sql import SparkSession
-from engineers import HugoFrajacomo
-
-spark = SparkSession.builder \
-    .appName("HugoProfileInit") \
-    .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") \
-    .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog") \
-    .config("spark.databricks.delta.optimizeWrite.enabled", "true") \
-    .config("spark.databricks.delta.autoCompact.enabled", "true") \
-    .getOrCreate()
-
-hugo = HugoFrajacomo()
-hugo.skills.load(catalog="UnityCatalog", schema="core_skills")
-
-hugo.optimize_pipeline(
-    source="Bronze_Raw_Sources",
-    target="Gold_Business_Metrics",
-    cluster_by=["partition_date", "domain"],
-    z_order_by=["high_cardinality_keys"]
-)
-# Output: [INFO] Pipeline loaded from c:/Users/fraja/Downloads/readme
-# Output: [SUCCESS] Delta Tables Optimized! Z-Order applied. Performance improved by 350%! ⚡
-```
-
-<div align="center">
-  
-  <br>
   <hr style="border: 0; height: 1px; background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 90, 54, 0.75), rgba(0, 120, 212, 0.75), rgba(0, 0, 0, 0)); margin: 20px 0;">
   
   <!-- ==================== TECHNICAL SKILLS MATRIX ==================== -->
