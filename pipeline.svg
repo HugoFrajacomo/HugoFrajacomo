@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="100%">
+  <defs>
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Gradients for Flow Lines -->
+    <linearGradient id="grad-api" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078D4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FF5A36" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="grad-db" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0078D4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FF5A36" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="grad-cloud" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0078D4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FF5A36" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="grad-engine-bronze" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5A36" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#CD7F32" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="grad-bronze-silver" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CD7F32" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="grad-silver-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Node Glow Filters -->
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-orange" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-bronze" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    /* Base styles */
+    .bg { fill: #07090e; }
+    .title-text { font-family: 'Outfit', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 14px; fill: #ffffff; letter-spacing: 1px; }
+    .sub-text { font-family: 'Fira Code', 'JetBrains Mono', monospace; font-size: 10px; fill: #798294; text-anchor: middle; }
+    .label-text { font-family: 'Outfit', 'Segoe UI', system-ui, sans-serif; font-size: 11px; fill: #a5b4fc; font-weight: 600; text-anchor: middle; }
+
+    /* Flow lines animation */
+    .flow-line-bg { stroke: #121824; stroke-width: 4; fill: none; stroke-linecap: round; }
+    .flow-line-active { stroke-width: 2; fill: none; stroke-linecap: round; stroke-dasharray: 8 16; animation: flow 2s linear infinite; }
+    
+    @keyframes flow {
+      to {
+        stroke-dashoffset: -48;
+      }
+    }
+
+    /* Node animations */
+    .pulse-blue { animation: pulseBlue 3s ease-in-out infinite; transform-origin: 110px var(--y); }
+    .pulse-orange { animation: pulseOrange 2.5s ease-in-out infinite; transform-origin: 300px 140px; }
+    .pulse-bronze { animation: pulseBronze 3s ease-in-out infinite; transform-origin: 500px 140px; }
+    .pulse-teal { animation: pulseTeal 3s ease-in-out infinite; transform-origin: 670px 140px; }
+    .pulse-gold { animation: pulseGold 2.8s ease-in-out infinite; transform-origin: 830px 140px; }
+
+    @keyframes pulseBlue {
+      0%, 100% { filter: drop-shadow(0 0 2px rgba(0, 120, 212, 0.4)); opacity: 0.85; }
+      50% { filter: drop-shadow(0 0 8px rgba(0, 120, 212, 0.85)); opacity: 1; }
+    }
+    @keyframes pulseOrange {
+      0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 90, 54, 0.4)); transform: scale(1); }
+      50% { filter: drop-shadow(0 0 14px rgba(255, 90, 54, 0.85)); transform: scale(1.03); }
+    }
+    @keyframes pulseBronze {
+      0%, 100% { filter: drop-shadow(0 0 2px rgba(205, 127, 50, 0.4)); }
+      50% { filter: drop-shadow(0 0 8px rgba(205, 127, 50, 0.8)); }
+    }
+    @keyframes pulseTeal {
+      0%, 100% { filter: drop-shadow(0 0 2px rgba(0, 242, 254, 0.4)); }
+      50% { filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.8)); }
+    }
+    @keyframes pulseGold {
+      0%, 100% { filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4)); transform: scale(1); }
+      50% { filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.85)); transform: scale(1.02); }
+    }
+
+    /* Engine Spin Animation */
+    .spin-ring { transform-origin: 300px 140px; animation: spin 16s linear infinite; }
+    .spin-ring-reverse { transform-origin: 300px 140px; animation: spin-rev 10s linear infinite; }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spin-rev {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+
+    /* Glassmorphism styling */
+    .glass-card { fill: rgba(13, 20, 35, 0.7); stroke: rgba(255, 255, 255, 0.08); stroke-width: 1.5; }
+    .connector-dot { fill: #00F2FE; }
+  </style>
+
+  <!-- Background Rect -->
+  <rect width="920" height="280" rx="18" class="bg" stroke="#1f2937" stroke-width="1.5"/>
+  <!-- Grid Overlay -->
+  <rect width="920" height="280" rx="18" fill="url(#grid)" />
+
+  <!-- Sub-Header Tech Badge -->
+  <g transform="translate(20, 25)">
+    <rect width="180" height="26" rx="13" fill="rgba(31, 41, 55, 0.5)" stroke="rgba(255, 90, 54, 0.2)" stroke-width="1"/>
+    <circle cx="15" cy="13" r="4" fill="#FF5A36" filter="url(#glow-orange)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="30" y="17" font-family="'Fira Code', monospace" font-size="10" fill="#ff7a59" font-weight="bold">LAKEHOUSE PIPELINE: ACTIVE</text>
+  </g>
+
+  <g transform="translate(730, 25)">
+    <text x="170" y="17" font-family="'Fira Code', monospace" font-size="10" fill="#00F2FE" font-weight="bold" text-anchor="end">SPARK STREAMING: 100%</text>
+  </g>
+
+  <!-- ==================== FLOW CHANNELS (BACKGROUND) ==================== -->
+  <path class="flow-line-bg" d="M 126,70 C 210,70 200,140 282,140" />
+  <path class="flow-line-bg" d="M 126,140 L 282,140" />
+  <path class="flow-line-bg" d="M 126,210 C 210,210 200,140 282,140" />
+  <path class="flow-line-bg" d="M 318,140 L 475,140" />
+  <path class="flow-line-bg" d="M 525,140 L 645,140" />
+  <path class="flow-line-bg" d="M 695,140 L 805,140" />
+
+  <!-- ==================== ACTIVE FLOW CHANNELS (ANIMATED) ==================== -->
+  <path class="flow-line-active" stroke="url(#grad-api)" d="M 126,70 C 210,70 200,140 282,140" />
+  <path class="flow-line-active" stroke="url(#grad-db)" d="M 126,140 L 282,140" />
+  <path class="flow-line-active" stroke="url(#grad-cloud)" d="M 126,210 C 210,210 200,140 282,140" />
+  <path class="flow-line-active" stroke="url(#grad-engine-bronze)" d="M 318,140 L 475,140" />
+  <path class="flow-line-active" stroke="url(#grad-bronze-silver)" d="M 525,140 L 645,140" />
+  <path class="flow-line-active" stroke="url(#grad-silver-gold)" d="M 695,140 L 805,140" />
+
+  <!-- ==================== PHYSICAL DATA PARTICLES ==================== -->
+  <!-- API -> Engine Particle -->
+  <circle r="3.5" fill="#0078D4" filter="url(#glow-blue)">
+    <animateMotion dur="2.4s" repeatCount="indefinite" path="M 110,70 C 210,70 200,140 300,140" />
+  </circle>
+  <!-- DB -> Engine Particle -->
+  <circle r="3.5" fill="#00F2FE" filter="url(#glow-teal)">
+    <animateMotion dur="1.8s" repeatCount="indefinite" path="M 110,140 L 300,140" />
+  </circle>
+  <!-- Cloud -> Engine Particle -->
+  <circle r="3.5" fill="#a5b4fc" filter="url(#glow-blue)">
+    <animateMotion dur="2.8s" repeatCount="indefinite" path="M 110,210 C 210,210 200,140 300,140" />
+  </circle>
+  <!-- Engine -> Bronze Particle -->
+  <circle r="4" fill="#FF5A36" filter="url(#glow-orange)">
+    <animateMotion dur="1.5s" repeatCount="indefinite" path="M 300,140 L 500,140" />
+  </circle>
+  <!-- Bronze -> Silver Particle -->
+  <circle r="4" fill="#CD7F32" filter="url(#glow-bronze)">
+    <animateMotion dur="1.8s" repeatCount="indefinite" path="M 500,140 L 670,140" />
+  </circle>
+  <!-- Silver -> Gold Particle -->
+  <circle r="4" fill="#FFD700" filter="url(#glow-gold)">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M 670,140 L 830,140" />
+  </circle>
+
+
+  <!-- ==================== INGESTION NODES (LEFT) ==================== -->
+  
+  <!-- Source 1: API -->
+  <g class="pulse-blue" style="--y: 70px;">
+    <rect x="50" y="52" width="76" height="36" rx="8" class="glass-card" />
+    <circle cx="65" cy="70" r="5" fill="#0078D4" filter="url(#glow-blue)"/>
+    <text x="92" y="74" font-family="'Outfit', sans-serif" font-weight="bold" font-size="11" fill="#ffffff" text-anchor="middle">API</text>
+  </g>
+  
+  <!-- Source 2: RDBMS/SQL -->
+  <g class="pulse-blue" style="--y: 140px;">
+    <rect x="50" y="122" width="76" height="36" rx="8" class="glass-card" />
+    <circle cx="65" cy="140" r="5" fill="#00F2FE" filter="url(#glow-teal)"/>
+    <text x="92" y="144" font-family="'Outfit', sans-serif" font-weight="bold" font-size="11" fill="#ffffff" text-anchor="middle">DB</text>
+  </g>
+  
+  <!-- Source 3: Cloud / Streams -->
+  <g class="pulse-blue" style="--y: 210px;">
+    <rect x="50" y="192" width="76" height="36" rx="8" class="glass-card" />
+    <circle cx="65" cy="210" r="5" fill="#a5b4fc" filter="url(#glow-blue)"/>
+    <text x="92" y="214" font-family="'Outfit', sans-serif" font-weight="bold" font-size="11" fill="#ffffff" text-anchor="middle">CLOUD</text>
+  </g>
+
+
+  <!-- ==================== CENTRAL ENGINE (DATABRICKS / PYSPARK) ==================== -->
+  <g class="pulse-orange">
+    <!-- Outer dashed spinning ring -->
+    <circle cx="300" cy="140" r="54" stroke="#FF5A36" stroke-width="1.5" stroke-dasharray="12 6" fill="none" class="spin-ring" opacity="0.4"/>
+    <!-- Middle dashed spinning ring (reverse) -->
+    <circle cx="300" cy="140" r="44" stroke="#00F2FE" stroke-width="1" stroke-dasharray="8 4" fill="none" class="spin-ring-reverse" opacity="0.6"/>
+    
+    <!-- Central Hexagon Processor -->
+    <polygon points="300,104 331,122 331,158 300,176 269,158 269,122" class="glass-card" stroke="#FF5A36" stroke-width="2" filter="url(#glow-orange)"/>
+    
+    <!-- Stylized Delta Glowing Symbol in the Center representing Delta Lake/Databricks -->
+    <path d="M 300,118 L 319,152 L 281,152 Z" fill="none" stroke="#FF5A36" stroke-width="2.5" stroke-linejoin="round" />
+    <!-- Inner Spark Node -->
+    <circle cx="300" cy="142" r="5" fill="#ffffff" filter="url(#glow-teal)"/>
+    
+    <text x="300" y="192" class="label-text">ENGINE</text>
+    <text x="300" y="205" class="sub-text">Databricks/Spark</text>
+  </g>
+
+
+  <!-- ==================== DELTA LAKE LAYERS (BRONZE, SILVER, GOLD) ==================== -->
+
+  <!-- BRONZE LAYER -->
+  <g class="pulse-bronze">
+    <!-- Cylinder Base -->
+    <path d="M 475,122 L 475,158 A 25,9 0 0 0 525,158 L 525,122 Z" fill="rgba(205, 127, 50, 0.15)" stroke="#CD7F32" stroke-width="1.5" />
+    <ellipse cx="500" cy="122" rx="25" ry="9" fill="rgba(205, 127, 50, 0.3)" stroke="#CD7F32" stroke-width="1.5" />
+    <!-- Inner glowing line -->
+    <path d="M 475,134 A 25,9 0 0 0 525,134" fill="none" stroke="rgba(205, 127, 50, 0.4)" stroke-width="1" />
+    <path d="M 475,146 A 25,9 0 0 0 525,146" fill="none" stroke="rgba(205, 127, 50, 0.4)" stroke-width="1" />
+    
+    <text x="500" y="184" class="label-text" fill="#CD7F32">BRONZE</text>
+    <text x="500" y="197" class="sub-text">Raw Data</text>
+  </g>
+
+  <!-- SILVER LAYER -->
+  <g class="pulse-teal">
+    <!-- Cylinder Base -->
+    <path d="M 645,122 L 645,158 A 25,9 0 0 0 695,158 L 695,122 Z" fill="rgba(0, 242, 254, 0.15)" stroke="#00F2FE" stroke-width="1.5" filter="url(#glow-teal)"/>
+    <ellipse cx="670" cy="122" rx="25" ry="9" fill="rgba(0, 242, 254, 0.3)" stroke="#00F2FE" stroke-width="1.5" />
+    <path d="M 645,134 A 25,9 0 0 0 695,134" fill="none" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1" />
+    <path d="M 645,146 A 25,9 0 0 0 695,146" fill="none" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1" />
+
+    <text x="670" y="184" class="label-text" fill="#00F2FE">SILVER</text>
+    <text x="670" y="197" class="sub-text">Cleaned &amp; Valid</text>
+  </g>
+
+  <!-- GOLD LAYER -->
+  <g class="pulse-gold">
+    <!-- Cylinder Base -->
+    <path d="M 805,122 L 805,158 A 25,9 0 0 0 855,158 L 855,122 Z" fill="rgba(255, 215, 0, 0.15)" stroke="#FFD700" stroke-width="2" filter="url(#glow-gold)"/>
+    <ellipse cx="830" cy="122" rx="25" ry="9" fill="rgba(255, 215, 0, 0.4)" stroke="#FFD700" stroke-width="2" />
+    <path d="M 805,134 A 25,9 0 0 0 855,134" fill="none" stroke="rgba(255, 215, 0, 0.5)" stroke-width="1" />
+    <path d="M 805,146 A 25,9 0 0 0 855,146" fill="none" stroke="rgba(255, 215, 0, 0.5)" stroke-width="1" />
+
+    <text x="830" y="184" class="label-text" fill="#FFD700">GOLD</text>
+    <text x="830" y="197" class="sub-text">Curated/Analytics</text>
+  </g>
+
+</svg>
